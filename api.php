@@ -18,12 +18,7 @@
 	if (strpos($_SERVER['HTTP_REFERER'] , 'page1') !== false)
 	{
 		echo "Login successfully, Welcome $user";
-	}
-	else if (strpos($_SERVER['HTTP_REFERER'] , 'page2') !== false)
-	{
-		echo "Login successfully, Welcome";
-	}
-	
+	}	
 ?>
 
 /* The second section is the fixed one.
@@ -45,13 +40,9 @@
 	$user = $creds->user;
 	$pass = $creds->pass;
 
-	if (strpos($_SERVER['HTTP_REFERER'] , 'stage1') !== false)
+	if (strpos($_SERVER['HTTP_REFERER'] , 'page1') !== false)
 	{		
-		setcookie("loggedIn","True", time()+3600, "/","");
+		setcookie("loggedIn","True", time()+3600, "/","",1,1);
 		echo "Login successfully, Welcome " . $user;
-	}
-	else if (strpos($_SERVER['HTTP_REFERER'] , 'stage2') !== false)
-	{
-		echo "Login successfully, Welcome";
 	}
 ?>
