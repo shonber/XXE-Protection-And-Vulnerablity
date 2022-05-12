@@ -27,7 +27,7 @@
 ?>
 
 /* The second section is the fixed one.
-* After removing the LIBXML_NOENT & LIBXML_DTDLOAD, Hackers are no longer able to run external files and DTD files.
+* After removing the LIBXML_NOENT & LIBXML_DTDLOAD and adding a logged on cookie, Hackers are no longer able to run external files and DTD files.
 */
 
 <?php 
